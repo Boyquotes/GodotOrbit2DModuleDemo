@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scripts/AsteroidSpawner.gd" type="Script" id=1]
+[ext_resource path="res://assets/Star/star.png" type="Texture2D" id=2]
+[ext_resource path="res://assets/Moon/moon.png" type="Texture2D" id=3]
+[ext_resource path="res://Area2D.gd" type="Script" id=4]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 39.8397
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 709.752
+
+[sub_resource type="CircleShape2D" id=3]
+
+[node name="Node2D" type="Node2D"]
+script = null
+
+[node name="AsteroidBelt" type="Node2D" parent="."]
+skew = 4.37114e-08
+script = ExtResource( 1 )
+nb_asteroids = 1000
+min_distance_from_center = 100.0
+max_distance_from_center = 500.0
+min_speed = 150.0
+max_speed = 150.0
+
+[node name="Sun" type="RigidBody2D" parent="."]
+skew = 4.37114e-08
+mode = 1
+gravity_scale = 0.0
+linear_damp = 0.0
+angular_velocity = 1.0
+angular_damp = 0.0
+script = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sun"]
+shape = SubResource( 2 )
+script = null
+
+[node name="Sprite2D" type="Sprite2D" parent="Sun"]
+position = Vector2( 0.739502, 0.739502 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 2 )
+script = null
+
+[node name="Camera2D" type="Camera2D" parent="."]
+skew = 4.37114e-08
+current = true
+zoom = Vector2( 2, 2 )
+script = null
+
+[node name="Gravity" type="Area2D" parent="."]
+skew = 4.37114e-08
+space_override = 1
+gravity_point = true
+gravity = 1024.0
+linear_damp = 0.0
+angular_damp = 0.0
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gravity"]
+shape = SubResource( 1 )
+script = null
+
+[node name="Moon" type="RigidBody2D" parent="."]
+position = Vector2( -519.132, -6.10352e-05 )
+linear_velocity = Vector2( 0, 50 )
+script = null
+
+[node name="moon" type="Sprite2D" parent="Moon"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+script = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moon"]
+shape = SubResource( 3 )
+script = null
