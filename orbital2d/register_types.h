@@ -1,7 +1,3 @@
-//
-// Created by PEACH,RYAN (K-Atlanta,ex1) on 8/15/20.
-//
-
 /* register_types.h */
 
 void register_orbital2d_types();

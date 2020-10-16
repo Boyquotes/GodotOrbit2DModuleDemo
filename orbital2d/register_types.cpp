@@ -1,6 +1,3 @@
-//
-// Created by PEACH,RYAN (K-Atlanta,ex1) on 8/15/20.
-//
 /* register_types.cpp */
 
 #include "register_types.h"
