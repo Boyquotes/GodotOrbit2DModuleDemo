@@ -27,7 +27,7 @@ func spawn_asteroid():
 	var nodeInstance: RigidBody2D = RigidBody2D.new()
 	var spriteInstance: Sprite2D = Sprite2D.new()
 	var collisionInstance: CollisionShape2D = CollisionShape2D.new()
-	spriteInstance.texture = load("res://assets/Moon/moon.png")
+	spriteInstance.set_texture(load("res://assets/Moon/moon.png"))
 	spriteInstance.set_scale(Vector2(.05, .05))
 	collisionInstance.set_shape(CircleShape2D.new())
 	nodeInstance.set_position(location)
