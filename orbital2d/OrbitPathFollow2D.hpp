@@ -3,7 +3,6 @@
 
 #include "OrbitPath2D.hpp"
 #include <core/math/vector2.h>
-#include <scene/2d/path_follow_2d.h>
 #include <scene/2d/area_2d.h>
 #include <scene/resources/curve.h>
 #include <scene/2d/sprite_2d.h>
